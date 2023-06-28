@@ -15,6 +15,15 @@ const letters = "abcdefghijklmnopqrstuvwzyz";
 let interval = null;
 
 document.querySelectorAll(".menu-item").forEach((element) => {
+  element.addEventListener("click",()=>{
+  menuItem.classList.toggle('active');
+  body.classList.toggle("active-body")
+  button.classList.toggle('-menu-open');
+  })
+  })
+  
+
+document.querySelectorAll(".menu-item").forEach((element) => {
   element.onmouseover = (event) => {
     let iteration = 0;
   
@@ -37,9 +46,5 @@ document.querySelectorAll(".menu-item").forEach((element) => {
     
       iteration += 1 / 2;
     }, 30);
-    
-  menuItem.classList.toggle('active');
-  body.classList.toggle("active-body")
-  button.classList.toggle('-menu-open');
   };
 });
