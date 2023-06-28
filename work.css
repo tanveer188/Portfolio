@@ -1,0 +1,64 @@
+.card-container {
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  place-items: center;
+  margin: 0;
+  overflow-x: hidden;
+  margin-top: 5rem;
+}
+
+.card-container > div {
+  margin-bottom: 3rem;
+}
+@keyframes pulse {
+  from, to {
+    scale: 1;
+  }
+  
+  50% {
+    scale: 1.08;
+  }
+}
+
+.card-svg {
+  position: absolute;
+}
+#card {
+  width: 300px;
+  aspect-ratio: 16 / 10;
+  border: 0.25rem solid rgb(255 255 255 / 15%);
+  border-radius: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#card > img {  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+#card:hover > img {
+  animation: pulse 800ms ease-in-out;
+  filter: url(#noise);
+}
+
+@media(max-width: 768px) {
+  #card {
+    width: 100%;
+  }
+}
+
+@media(max-width: 500px) {
+  #card {
+    width: 90vw;
+  }
+  .card-container {
+    margin-top: 0rem;
+  }
+}
+
+/* -- Links -- */
